@@ -12,12 +12,6 @@ const Home = ({ products, bannerData }) => {
         <p></p>
       </div>
 
-      {/* <div className="products-container">
-        {products?.map((product) => (
-          <Product key={product._id} product={product} />
-        ))}
-      </div> */}
-
       <div className="products-container">
         {products?.map((product) => (
           <Product key={product._id} product={product} />
@@ -35,8 +29,6 @@ export const getServerSideProps = async () => {
 
   const bannerQuery = '*[_type=="banner"]';
   const bannerData = await client.fetch(bannerQuery);
-
-  console.log(HeroBanner);
 
   return {
     props: { products, bannerData },
