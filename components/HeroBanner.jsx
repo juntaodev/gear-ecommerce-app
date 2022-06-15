@@ -31,7 +31,6 @@ const HeroBanner = ({
             <button type="button">{buttonText}</button>
           </Link>
           <div className="desc">
-            <h5>Description</h5>
             <p>{desc}</p>
           </div>
         </div>
