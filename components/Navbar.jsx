@@ -10,10 +10,12 @@ const Navbar = () => {
 
   return (
     <div className="navbar-container">
-      <p className="logo">
-        <Link href="/">My Gear</Link>
-      </p>
+      {/* logo */}
+      <div className="logo">
+        <Link href="/">GearStore</Link>
+      </div>
 
+      {/* cart */}
       <button
         type="button"
         className="cart-icon"
@@ -22,7 +24,6 @@ const Navbar = () => {
         <AiOutlineShopping />
         <span className="cart-item-qty">{totalQuantities}</span>
       </button>
-
       {showCart && <Cart />}
     </div>
   );
